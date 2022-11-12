@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="error"></div>
+    <form action="">
+        <div>
+            <label for="Blog title:">Blog title:</label><br>
+            <input id="Blog title" name="Blog title" type="Blog 4" placeholder="Blog 4">
+        </div>
+        <div>
+            <label for="Blog body:">Blog body:</label><br>
+            <input id="Blog body" name="Blogbody()" type="text" placeholder="Blog body">
+        </div>
+        <div>
+            <label for="Author">Author:</label><br>
+            <input id="Author" name="Author">
+        </div>
+        <div>
+            <label for="Number">Number:</label><br>
+            <input id="Number" name="Number">
+        </div>
+        <div>
+            <label for="Email">Email:</label><br>
+            <input id="Email" name="Email" type="Email" placeholder="monikagmail.com">
+        </div>
+        <br>
+        <div>
+            <button type="submit" value="Save">Save</button>
+        </div>
+    </form>
+            <script src="./f.js"></script>
+            <script>
+                const frm=document.querySelector('from');
+                const errormsg=document.GetElementById('error');
+                const emailInput=document.GetElementById('Email');
+                const numberInput=document.GetElementById('Number');
+                const authorInput=document.GetElementById('Author');
+                const blogbodyInput=document.GetElementById('Blog body');
+                console.log(emailInput.value);
+                frm.addEventListener('submit',(e) =>{
+                    let messages=[];
+                    if(emailInput.value==" " || emailInput.value==null){
+                        massages.push('email is required');
+                    }
+                })
+                function Blogbody(){
+                    var a=document.getElementById("Blog body").value;
+                    var say=a.length;
+                    if(say<2){
+                        document.getElementById("netice").innerHTML=
+                      "The text has to be between 2 and 20 characters long now "+say+" characters "  ;
+                    }
+                }
+               
+            </script>
+
+        
+
+   
+</body>
+</html>
